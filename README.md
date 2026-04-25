@@ -16,7 +16,7 @@ A simple Python CLI tool that fetches real-time country data using the [REST Cou
 
 ## Installation
 
-git clone https://github.com/KULLANICI_ADIN/country-explorer.git
+git clone https://github.com/anmurat/country-explorer.git
 cd country-explorer
 pip install requests
 
