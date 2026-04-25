@@ -30,6 +30,7 @@ python main.py turkey germany japan
 
 ## Example Output
 
+```
 🇹🇷 Turkey
    Capital    : Ankara
    Population : 85,664,944
@@ -43,6 +44,7 @@ python main.py turkey germany japan
    Region     : Europe
    Currency   : euro
    Language(s): German
+```
 
 ## API
 
