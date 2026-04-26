@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .result {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .result h2 {
+            margin-top: 0;
+        }
+
+        .result p {
+            margin: 8px 0;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌍 Country Explorer</h1>
+
+    <!-- Form — when submitted, sends a POST request to "/" -->
+    <form method="POST">
+        <input type="text" name="country" placeholder="Enter a country name..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Show error if country not found -->
+    {% if error %}
+        <p class="error">❌ {{ error }}</p>
+    {% endif %}
+
+    <!-- Show result if we got data -->
+    {% if result %}
+        <div class="result">
+            <h2>{{ result.flag }} {{ result.name }}</h2>
+            <p><strong>Capital:</strong> {{ result.capital }}</p>
+            <p><strong>Population:</strong> {{ result.population }}</p>
+            <p><strong>Region:</strong> {{ result.region }}</p>
+            <p><strong>Currency:</strong> {{ result.currency }}</p>
+            <p><strong>Language(s):</strong> {{ result.language }}</p>
+        </div>
+    {% endif %}
+
+</body>
+</html>
