@@ -16,7 +16,7 @@ A simple Python CLI tool that fetches real-time country data using the [REST Cou
 
 ## Installation
 
-git clone https://github.com/KULLANICI_ADIN/country-explorer.git
+git clone https://github.com/anmurat/country-explorer.git
 cd country-explorer
 pip install requests
 
@@ -30,6 +30,7 @@ python main.py turkey germany japan
 
 ## Example Output
 
+```
 🇹🇷 Turkey
    Capital    : Ankara
    Population : 85,664,944
@@ -43,6 +44,7 @@ python main.py turkey germany japan
    Region     : Europe
    Currency   : euro
    Language(s): German
+```
 
 ## API
 
