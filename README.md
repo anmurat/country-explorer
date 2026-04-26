@@ -22,29 +22,19 @@ pip install requests
 
 ## Usage
 
+### CLI
 Single country:
 python main.py turkey
 
 Multiple countries:
 python main.py turkey germany japan
 
-## Example Output
+### Web Interface
+Run the Flask app:
+python app.py
 
-```
-🇹🇷 Turkey
-   Capital    : Ankara
-   Population : 85,664,944
-   Region     : Asia
-   Currency   : Turkish lira
-   Language(s): Turkish
-
-🇩🇪 Germany
-   Capital    : Berlin
-   Population : 83,491,249
-   Region     : Europe
-   Currency   : euro
-   Language(s): German
-```
+Then open your browser and go to:
+http://127.0.0.1:5000
 
 ## API
 
